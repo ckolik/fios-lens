@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Router Bandwidth Trends</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Device Bandwidth Throughput</h1>
+      <section class="controls">
+        <label for="deviceSelect">Select devices to plot</label>
+        <select id="deviceSelect" multiple></select>
+        <div class="legend-note">Each device renders two lines: upload (solid) and download (dashed).</div>
+      </section>
+      <section class="chart-wrapper">
+        <canvas id="bandwidthChart"></canvas>
+        <div id="emptyState" class="hidden">No device bandwidth history found. Run the bandwidth scraper first.</div>
+      </section>
+    </main>
+    <script src="{{ url_for('static', filename='app.js') }}" type="module"></script>
+  </body>
+</html>

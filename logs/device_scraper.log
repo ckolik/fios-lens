@@ -1,0 +1,161 @@
+[20251125-220745] Running device scraper
+/Users/ckolik/Projects/fios-lens/scraper/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+2025-11-25 22:07:46,299 INFO router_scraper - Navigating to login page https://192.168.1.1/#/login/
+2025-11-25 22:07:48,204 INFO router_scraper - Login successful.
+2025-11-25 22:07:48,204 INFO router_scraper - Loading device list from https://192.168.1.1/#/adv/devices/list
+2025-11-25 22:07:56,365 INFO router_scraper - Parsed 79 devices from the list view.
+2025-11-25 22:07:56,366 INFO router_scraper - Collecting detail page for 64:16:66:03:8f:da (1/79)
+2025-11-25 22:07:59,625 INFO router_scraper - Collecting detail page for 08:c2:24:b6:58:c9 (2/79)
+2025-11-25 22:08:00,663 INFO router_scraper - Collecting detail page for 38:f7:3d:6e:2a:0d (3/79)
+2025-11-25 22:08:01,700 INFO router_scraper - Collecting detail page for 90:a8:22:71:2f:6c (4/79)
+2025-11-25 22:08:02,738 INFO router_scraper - Collecting detail page for 56:64:5a:66:bb:76 (5/79)
+2025-11-25 22:08:03,778 INFO router_scraper - Collecting detail page for f4:4e:38:12:fb:38 (6/79)
+2025-11-25 22:08:04,818 INFO router_scraper - Collecting detail page for 2c:0d:a7:d6:18:66 (7/79)
+2025-11-25 22:08:05,858 INFO router_scraper - Collecting detail page for 3c:bd:c5:ec:da:9a (8/79)
+2025-11-25 22:08:06,895 INFO router_scraper - Collecting detail page for 38:8b:59:95:e1:3c (9/79)
+2025-11-25 22:08:07,932 INFO router_scraper - Collecting detail page for c0:18:03:f4:d1:aa (10/79)
+2025-11-25 22:08:08,973 INFO router_scraper - Collecting detail page for 10:27:f5:be:bd:97 (11/79)
+2025-11-25 22:08:10,013 INFO router_scraper - Collecting detail page for 04:17:b6:38:54:33 (12/79)
+2025-11-25 22:08:11,050 INFO router_scraper - Collecting detail page for 42:82:43:67:3e:c2 (13/79)
+2025-11-25 22:08:12,086 INFO router_scraper - Collecting detail page for f2:f3:ab:e1:73:18 (14/79)
+2025-11-25 22:08:13,126 INFO router_scraper - Collecting detail page for ce:94:b3:2d:9f:fe (15/79)
+2025-11-25 22:08:14,166 INFO router_scraper - Collecting detail page for 2a:81:b7:c9:f1:57 (16/79)
+2025-11-25 22:08:15,192 INFO router_scraper - Collecting detail page for 10:bd:3a:70:d8:57 (17/79)
+2025-11-25 22:08:16,225 INFO router_scraper - Collecting detail page for f8:17:2d:b0:e3:1f (18/79)
+2025-11-25 22:08:17,263 INFO router_scraper - Collecting detail page for f8:17:2d:aa:6c:2a (19/79)
+2025-11-25 22:08:18,303 INFO router_scraper - Collecting detail page for 22:f7:b7:18:17:04 (20/79)
+2025-11-25 22:08:19,343 INFO router_scraper - Collecting detail page for b8:7b:d4:cb:71:f9 (21/79)
+2025-11-25 22:08:20,374 INFO router_scraper - Collecting detail page for 3c:31:74:d8:e8:98 (22/79)
+2025-11-25 22:08:21,437 INFO router_scraper - Collecting detail page for 3c:31:74:ce:00:9c (23/79)
+2025-11-25 22:08:22,468 INFO router_scraper - Collecting detail page for 44:bb:3b:14:e1:6b (24/79)
+2025-11-25 22:08:23,370 WARNING router_scraper - Scraper interrupted by user.
+2025-11-25 22:08:23,373 WARNING urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(54, 'Connection reset by peer')': /session/b64fd22cb16e6eab3abd174ba3515e44
+2025-11-25 22:08:23,374 WARNING urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a415e80>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/b64fd22cb16e6eab3abd174ba3515e44
+2025-11-25 22:08:23,375 WARNING urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a415fd0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/b64fd22cb16e6eab3abd174ba3515e44
+[20251125-220825] Running device scraper
+/Users/ckolik/Projects/fios-lens/scraper/venv/bin/python: can't open file '/Users/ckolik/Projects/fios-lens/scraper/router_scraper.py --headless': [Errno 2] No such file or directory
+[20251125-220830] Running device scraper
+/Users/ckolik/Projects/fios-lens/scraper/venv/bin/python: can't open file '/Users/ckolik/Projects/fios-lens/scraper/router_scraper.py --headless': [Errno 2] No such file or directory
+[20251125-220846] Running device scraper
+/Users/ckolik/Projects/fios-lens/scraper/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+2025-11-25 22:08:46,734 INFO router_scraper - Navigating to login page https://192.168.1.1/#/login/
+2025-11-25 22:08:48,599 INFO router_scraper - Login successful.
+2025-11-25 22:08:48,600 INFO router_scraper - Loading device list from https://192.168.1.1/#/adv/devices/list
+2025-11-25 22:08:56,746 INFO router_scraper - Parsed 79 devices from the list view.
+2025-11-25 22:08:56,746 INFO router_scraper - Collecting detail page for 64:16:66:03:8f:da (1/79)
+2025-11-25 22:08:59,949 INFO router_scraper - Collecting detail page for 08:c2:24:b6:58:c9 (2/79)
+2025-11-25 22:09:00,979 INFO router_scraper - Collecting detail page for 38:f7:3d:6e:2a:0d (3/79)
+2025-11-25 22:09:02,011 INFO router_scraper - Collecting detail page for 90:a8:22:71:2f:6c (4/79)
+2025-11-25 22:09:03,046 INFO router_scraper - Collecting detail page for 56:64:5a:66:bb:76 (5/79)
+2025-11-25 22:09:04,086 INFO router_scraper - Collecting detail page for f4:4e:38:12:fb:38 (6/79)
+2025-11-25 22:09:05,121 INFO router_scraper - Collecting detail page for 2c:0d:a7:d6:18:66 (7/79)
+2025-11-25 22:09:06,160 INFO router_scraper - Collecting detail page for 3c:bd:c5:ec:da:9a (8/79)
+2025-11-25 22:09:07,198 INFO router_scraper - Collecting detail page for 38:8b:59:95:e1:3c (9/79)
+2025-11-25 22:09:08,234 INFO router_scraper - Collecting detail page for c0:18:03:f4:d1:aa (10/79)
+2025-11-25 22:09:09,271 INFO router_scraper - Collecting detail page for 10:27:f5:be:bd:97 (11/79)
+2025-11-25 22:09:10,307 INFO router_scraper - Collecting detail page for 04:17:b6:38:54:33 (12/79)
+2025-11-25 22:09:11,346 INFO router_scraper - Collecting detail page for 42:82:43:67:3e:c2 (13/79)
+2025-11-25 22:09:12,380 INFO router_scraper - Collecting detail page for f2:f3:ab:e1:73:18 (14/79)
+2025-11-25 22:09:13,415 INFO router_scraper - Collecting detail page for ce:94:b3:2d:9f:fe (15/79)
+2025-11-25 22:09:14,455 INFO router_scraper - Collecting detail page for 2a:81:b7:c9:f1:57 (16/79)
+2025-11-25 22:09:15,494 INFO router_scraper - Collecting detail page for 10:bd:3a:70:d8:57 (17/79)
+2025-11-25 22:09:16,534 INFO router_scraper - Collecting detail page for f8:17:2d:b0:e3:1f (18/79)
+2025-11-25 22:09:17,571 INFO router_scraper - Collecting detail page for f8:17:2d:aa:6c:2a (19/79)
+2025-11-25 22:09:18,604 INFO router_scraper - Collecting detail page for 22:f7:b7:18:17:04 (20/79)
+2025-11-25 22:09:19,632 INFO router_scraper - Collecting detail page for b8:7b:d4:cb:71:f9 (21/79)
+2025-11-25 22:09:20,672 INFO router_scraper - Collecting detail page for 3c:31:74:d8:e8:98 (22/79)
+2025-11-25 22:09:21,725 INFO router_scraper - Collecting detail page for 3c:31:74:ce:00:9c (23/79)
+2025-11-25 22:09:22,767 INFO router_scraper - Collecting detail page for 44:bb:3b:14:e1:6b (24/79)
+2025-11-25 22:09:23,136 WARNING router_scraper - Scraper interrupted by user.
+2025-11-25 22:09:23,139 WARNING urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(54, 'Connection reset by peer')': /session/4ffd65016eace7ed1b272328171abaa6
+2025-11-25 22:09:23,140 WARNING urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x108f10280>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/4ffd65016eace7ed1b272328171abaa6
+2025-11-25 22:09:23,142 WARNING urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x108f10400>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/4ffd65016eace7ed1b272328171abaa6
+[20251125-220952] Running device scraper
+/Users/ckolik/Projects/fios-lens/scraper/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+2025-11-25 22:09:53,213 INFO router_scraper - Navigating to login page https://192.168.1.1/#/login/
+2025-11-25 22:09:55,079 INFO router_scraper - Login successful.
+2025-11-25 22:09:55,079 INFO router_scraper - Loading device list from https://192.168.1.1/#/adv/devices/list
+2025-11-25 22:10:03,231 INFO router_scraper - Parsed 79 devices from the list view.
+2025-11-25 22:10:03,232 INFO router_scraper - Collecting detail page for 64:16:66:03:8f:da (1/79)
+2025-11-25 22:10:06,433 INFO router_scraper - Collecting detail page for 08:c2:24:b6:58:c9 (2/79)
+2025-11-25 22:10:07,475 INFO router_scraper - Collecting detail page for 38:f7:3d:6e:2a:0d (3/79)
+2025-11-25 22:10:08,513 INFO router_scraper - Collecting detail page for 90:a8:22:71:2f:6c (4/79)
+2025-11-25 22:10:09,554 INFO router_scraper - Collecting detail page for 56:64:5a:66:bb:76 (5/79)
+2025-11-25 22:10:10,586 INFO router_scraper - Collecting detail page for f4:4e:38:12:fb:38 (6/79)
+2025-11-25 22:10:11,621 INFO router_scraper - Collecting detail page for 2c:0d:a7:d6:18:66 (7/79)
+2025-11-25 22:10:12,658 INFO router_scraper - Collecting detail page for 3c:bd:c5:ec:da:9a (8/79)
+2025-11-25 22:10:13,698 INFO router_scraper - Collecting detail page for 38:8b:59:95:e1:3c (9/79)
+2025-11-25 22:10:14,733 INFO router_scraper - Collecting detail page for c0:18:03:f4:d1:aa (10/79)
+2025-11-25 22:10:15,773 INFO router_scraper - Collecting detail page for 10:27:f5:be:bd:97 (11/79)
+2025-11-25 22:10:16,814 INFO router_scraper - Collecting detail page for 04:17:b6:38:54:33 (12/79)
+2025-11-25 22:10:17,851 INFO router_scraper - Collecting detail page for 42:82:43:67:3e:c2 (13/79)
+2025-11-25 22:10:18,893 INFO router_scraper - Collecting detail page for f2:f3:ab:e1:73:18 (14/79)
+2025-11-25 22:10:19,933 INFO router_scraper - Collecting detail page for ce:94:b3:2d:9f:fe (15/79)
+2025-11-25 22:10:20,969 INFO router_scraper - Collecting detail page for 2a:81:b7:c9:f1:57 (16/79)
+2025-11-25 22:10:22,008 INFO router_scraper - Collecting detail page for 10:bd:3a:70:d8:57 (17/79)
+2025-11-25 22:10:23,046 INFO router_scraper - Collecting detail page for f8:17:2d:b0:e3:1f (18/79)
+2025-11-25 22:10:24,082 INFO router_scraper - Collecting detail page for f8:17:2d:aa:6c:2a (19/79)
+2025-11-25 22:10:25,124 INFO router_scraper - Collecting detail page for 22:f7:b7:18:17:04 (20/79)
+2025-11-25 22:10:26,163 INFO router_scraper - Collecting detail page for b8:7b:d4:cb:71:f9 (21/79)
+2025-11-25 22:10:27,204 INFO router_scraper - Collecting detail page for 3c:31:74:d8:e8:98 (22/79)
+2025-11-25 22:10:28,255 INFO router_scraper - Collecting detail page for 3c:31:74:ce:00:9c (23/79)
+2025-11-25 22:10:29,291 INFO router_scraper - Collecting detail page for 44:bb:3b:14:e1:6b (24/79)
+2025-11-25 22:10:30,323 INFO router_scraper - Collecting detail page for 18:b4:30:fb:e7:e7 (25/79)
+2025-11-25 22:10:31,365 INFO router_scraper - Collecting detail page for 64:16:66:6d:8a:4c (26/79)
+2025-11-25 22:10:32,403 INFO router_scraper - Collecting detail page for 2c:cf:67:e7:c0:6a (27/79)
+2025-11-25 22:10:33,439 INFO router_scraper - Collecting detail page for e8:aa:cb:d8:0a:68 (28/79)
+2025-11-25 22:10:34,476 INFO router_scraper - Collecting detail page for c4:38:75:bc:9e:70 (29/79)
+2025-11-25 22:10:35,511 INFO router_scraper - Collecting detail page for b8:e9:37:9b:a6:92 (30/79)
+2025-11-25 22:10:36,551 INFO router_scraper - Collecting detail page for 5c:aa:fd:9a:35:d8 (31/79)
+2025-11-25 22:10:37,589 INFO router_scraper - Collecting detail page for 54:2a:1b:4e:c6:64 (32/79)
+2025-11-25 22:10:38,626 INFO router_scraper - Collecting detail page for 10:2c:b1:ba:3f:88 (33/79)
+2025-11-25 22:10:39,663 INFO router_scraper - Collecting detail page for 90:bf:d9:16:a9:da (34/79)
+2025-11-25 22:10:40,703 INFO router_scraper - Collecting detail page for 18:b4:30:38:dd:5e (35/79)
+2025-11-25 22:10:41,742 INFO router_scraper - Collecting detail page for 18:b4:30:9f:cc:65 (36/79)
+2025-11-25 22:10:42,781 INFO router_scraper - Collecting detail page for 18:b4:30:9f:dd:cf (37/79)
+2025-11-25 22:10:43,822 INFO router_scraper - Collecting detail page for 18:b4:30:a7:fe:16 (38/79)
+2025-11-25 22:10:44,857 INFO router_scraper - Collecting detail page for 36:3c:e0:76:21:de (39/79)
+2025-11-25 22:10:45,892 INFO router_scraper - Collecting detail page for 78:6c:84:ce:e2:7f (40/79)
+2025-11-25 22:10:46,921 INFO router_scraper - Collecting detail page for 94:3a:91:fb:64:6e (41/79)
+2025-11-25 22:10:47,957 INFO router_scraper - Collecting detail page for b4:b7:42:62:38:5f (42/79)
+2025-11-25 22:10:48,994 INFO router_scraper - Collecting detail page for f8:4d:89:60:bf:7b (43/79)
+2025-11-25 22:10:50,032 INFO router_scraper - Collecting detail page for c0:d2:f3:7b:89:5e (44/79)
+2025-11-25 22:10:51,071 INFO router_scraper - Collecting detail page for 54:67:e6:6d:ec:36 (45/79)
+2025-11-25 22:10:52,108 INFO router_scraper - Collecting detail page for b4:e4:54:63:16:75 (46/79)
+2025-11-25 22:10:53,146 INFO router_scraper - Collecting detail page for 00:d2:b1:6c:31:8f (47/79)
+2025-11-25 22:10:54,172 INFO router_scraper - Collecting detail page for b4:61:e9:68:32:92 (48/79)
+2025-11-25 22:10:55,204 INFO router_scraper - Collecting detail page for 4c:d5:77:0a:34:d3 (49/79)
+2025-11-25 22:10:56,238 INFO router_scraper - Collecting detail page for b6:51:ec:3f:11:5f (50/79)
+2025-11-25 22:10:57,268 INFO router_scraper - Collecting detail page for c2:bc:da:cf:8c:48 (51/79)
+2025-11-25 22:10:58,305 INFO router_scraper - Collecting detail page for 9a:89:16:0b:aa:5e (52/79)
+2025-11-25 22:10:59,329 INFO router_scraper - Collecting detail page for 90:cd:e8:84:e7:d8 (53/79)
+2025-11-25 22:11:00,361 INFO router_scraper - Collecting detail page for 90:cd:e8:59:5b:9a (54/79)
+2025-11-25 22:11:01,394 INFO router_scraper - Collecting detail page for 66:e9:2c:fb:25:04 (55/79)
+2025-11-25 22:11:02,429 INFO router_scraper - Collecting detail page for 4e:3a:8e:8b:25:4c (56/79)
+2025-11-25 22:11:03,465 INFO router_scraper - Collecting detail page for 4a:e4:bf:b2:c7:e3 (57/79)
+2025-11-25 22:11:04,504 INFO router_scraper - Collecting detail page for 2a:2f:b5:d6:22:7e (58/79)
+2025-11-25 22:11:05,540 INFO router_scraper - Collecting detail page for 26:95:e1:e3:c3:12 (59/79)
+2025-11-25 22:11:06,581 INFO router_scraper - Collecting detail page for f8:17:2d:d7:ba:b7 (60/79)
+2025-11-25 22:11:07,616 INFO router_scraper - Collecting detail page for f8:17:2d:d5:da:1b (61/79)
+2025-11-25 22:11:08,651 INFO router_scraper - Collecting detail page for d6:f9:cd:2b:6d:1d (62/79)
+2025-11-25 22:11:09,689 INFO router_scraper - Collecting detail page for 84:2f:57:39:d3:b5 (63/79)
+2025-11-25 22:11:10,728 INFO router_scraper - Collecting detail page for c4:38:75:a1:ef:d8 (64/79)
+2025-11-25 22:11:11,762 INFO router_scraper - Collecting detail page for b8:e9:37:be:25:78 (65/79)
+2025-11-25 22:11:12,796 INFO router_scraper - Collecting detail page for 5c:aa:fd:9a:36:46 (66/79)
+2025-11-25 22:11:13,832 INFO router_scraper - Collecting detail page for 18:b4:30:d9:3e:b4 (67/79)
+2025-11-25 22:11:14,873 INFO router_scraper - Collecting detail page for 3e:5c:63:b7:8c:52 (68/79)
+2025-11-25 22:11:15,910 INFO router_scraper - Collecting detail page for 48:5f:2d:35:4a:31 (69/79)
+2025-11-25 22:11:16,944 INFO router_scraper - Collecting detail page for 50:23:6d:4f:ea:0c (70/79)
+2025-11-25 22:11:17,982 INFO router_scraper - Collecting detail page for 62:35:68:cd:fd:f5 (71/79)
+2025-11-25 22:11:19,022 INFO router_scraper - Collecting detail page for 7a:b3:f3:f6:63:98 (72/79)
+2025-11-25 22:11:20,062 INFO router_scraper - Collecting detail page for 7e:1c:86:1e:ab:7a (73/79)
+2025-11-25 22:11:21,104 INFO router_scraper - Collecting detail page for 98:cd:ac:35:ae:f2 (74/79)
+2025-11-25 22:11:22,140 INFO router_scraper - Collecting detail page for a2:f9:5e:c1:6f:fb (75/79)
+2025-11-25 22:11:23,181 INFO router_scraper - Collecting detail page for da:59:14:a6:bf:ba (76/79)
+2025-11-25 22:11:24,217 INFO router_scraper - Collecting detail page for 8a:0b:eb:48:ae:c0 (77/79)
+2025-11-25 22:11:25,246 INFO router_scraper - Collecting detail page for 7e:1a:b6:6a:7f:4e (78/79)
+2025-11-25 22:11:26,284 INFO router_scraper - Collecting detail page for 56:8e:cf:78:33:39 (79/79)
+2025-11-25 22:11:27,319 INFO router_scraper - Wrote 79 devices to /Users/ckolik/Projects/fios-lens/output/devices_20251126-031127.json

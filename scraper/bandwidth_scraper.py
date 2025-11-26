@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -20,6 +21,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from router_scraper import build_driver, clean_text, configure_logging, load_config, normalize_label
 
 LOGGER = logging.getLogger("bandwidth_scraper")
+SIZE_PATTERN = re.compile(r"^(?P<value>[0-9]*\.?[0-9]+)\s*(?P<unit>[a-zA-Z]+)?$")
 
 
 def parse_args() -> argparse.Namespace:
@@ -165,14 +167,17 @@ class BandwidthScraper:
             LOGGER.debug("WAN usage table did not expose a 1hr column.")
             return {}
 
+        upload_bytes = size_to_bytes(metrics.get("upload", ""))
+        download_bytes = size_to_bytes(metrics.get("download", ""))
+
         LOGGER.info(
-            "Captured WAN throughput (1hr): upload=%s, download=%s",
-            metrics.get("upload", ""),
-            metrics.get("download", ""),
+            "Captured WAN throughput (1hr): upload=%d bytes, download=%d bytes",
+            upload_bytes,
+            download_bytes,
         )
         return {
-            "upload_1hr": metrics.get("upload", ""),
-            "download_1hr": metrics.get("download", ""),
+            "upload_1hr": upload_bytes,
+            "download_1hr": download_bytes,
         }
 
     def _scrape_lan_bandwidth(self) -> List[Dict[str, str]]:
@@ -201,17 +206,20 @@ class BandwidthScraper:
 
             cells = summary_row.select('div[role="cell"]')
             ip_address = clean_text(cells[2]) if len(cells) >= 3 else ""
-            total_usage = clean_text(cells[3]) if len(cells) >= 4 else ""
+            total_usage_str = clean_text(cells[3]) if len(cells) >= 4 else ""
 
             device_name = clean_text(span)
             LOGGER.info("Collecting bandwidth metrics for %s (%d/%d)", device_name or "Unknown", index, total)
+            total_usage_bytes = size_to_bytes(total_usage_str)
+            upload_bytes = size_to_bytes(usage_metrics.get("upload", ""))
+            download_bytes = size_to_bytes(usage_metrics.get("download", ""))
             devices.append(
                 {
                     "device_name": device_name,
                     "ip_address": ip_address,
-                    "total_usage": total_usage,
-                    "upload_1hr": usage_metrics.get("upload", ""),
-                    "download_1hr": usage_metrics.get("download", ""),
+                    "total_usage": total_usage_bytes,
+                    "upload_1hr": upload_bytes,
+                    "download_1hr": download_bytes,
                 }
             )
 
@@ -328,6 +336,39 @@ def extract_one_hour_usage(block) -> Dict[str, str]:
     return results
 
 
+def size_to_bytes(raw_value: Optional[str]) -> int:
+    if not raw_value:
+        return 0
+    text = str(raw_value).strip()
+    if not text:
+        return 0
+    if text.isdigit():
+        return int(text)
+    match = SIZE_PATTERN.match(text)
+    if not match:
+        return 0
+    value = float(match.group("value"))
+    unit = (match.group("unit") or "bytes").lower()
+    multiplier = {
+        "b": 1,
+        "byte": 1,
+        "bytes": 1,
+        "kb": 1024,
+        "kilobyte": 1024,
+        "kilobytes": 1024,
+        "mb": 1024 ** 2,
+        "megabyte": 1024 ** 2,
+        "megabytes": 1024 ** 2,
+        "gb": 1024 ** 3,
+        "gigabyte": 1024 ** 3,
+        "gigabytes": 1024 ** 3,
+        "tb": 1024 ** 4,
+        "terabyte": 1024 ** 4,
+        "terabytes": 1024 ** 4,
+    }.get(unit, 1)
+    return int(value * multiplier)
+
+
 def write_bandwidth_output(payload: Dict[str, object], output_dir: Path) -> Optional[Path]:
     if not payload:
         return None
@@ -353,7 +394,10 @@ def main() -> int:
         LOGGER.error("Router password must be provided via config or --password.")
         return 1
 
-    headless_cfg = config.get("headless", "true").lower() in {"1", "true", "yes", "on"}
+    headless_cfg = True
+    config_headless = config.get("headless")
+    if config_headless is not None:
+        headless_cfg = str(config_headless).lower() in {"1", "true", "yes", "on"}
     if args.headless is not None:
         headless_cfg = args.headless
 

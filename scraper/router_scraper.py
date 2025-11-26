@@ -497,7 +497,10 @@ def main() -> int:
         LOGGER.error("Router password must be provided via config or --password.")
         return 1
 
-    headless_cfg = config.get("headless", "true").lower() in {"1", "true", "yes", "on"}
+    headless_cfg = True
+    config_headless = config.get("headless")
+    if config_headless is not None:
+        headless_cfg = str(config_headless).lower() in {"1", "true", "yes", "on"}
     if args.headless is not None:
         headless_cfg = args.headless
 
