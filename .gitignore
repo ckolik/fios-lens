@@ -1,0 +1,6 @@
+.vscode/**
+output/**
+__pycache__/**
+scraper/venv/**
+**/venv/**
+**/.venv/**

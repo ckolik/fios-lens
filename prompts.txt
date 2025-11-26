@@ -1,0 +1,21 @@
+CODEX PROMPTS
+--------------------
+
+Within the scraper folder, create a python script that logs into my router admin page at https://192.168.1.1/ using only a password (all configurable via .ini file), navigates to the https://192.168.1.1/#/adv/devices/list page to get a list of all devices registered with the router (online and offline), scrapes the devices from that page and then for each device, using the scraped MAC address of the device, navigate to https://192.168.1.1/#/adv/devices/list/settings/MAC_ADDRESS (replacing MAC_ADDRESS with the appropriate value from the device) and then scraping all device-specific info from that page.  The output should be written to a JSON file in a directory called "output" which is one level up from the current running "scraper" directory.  An example of the output format is in the "examples/output/device
+s_YYYYMMDD-HHMISS.json" file.
+
+The scraper script should use Selenium to navigate to each page but then use BeautifulSoup to parse each page for the desired content.  Examples of the login, device list, and device details pages are in the "examples/router_admin_source_pages" directory and may be helpful for coming up with the scraping code.
+
+Create an appropriate requirements.txt file in the scraper directory for the code therein.
+
+The code should allow for detailed logging by default using the logger package and also very detailed debug logging that prints out what each step is doing.
+
+--------------------
+
+The code seems to only be recording Offline devices when we want to scrape/record both Offline and Online devices listed in the "examples/router_admin_source_pages/advanced_devices.html" page.
+
+--------------------
+
+The code still seems to be only extracting the offline devices when there are 43 online devices to capture, as well.
+
+--------------------
